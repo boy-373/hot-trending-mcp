@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.boy-373/hot-trending-mcp",
+  "title": "China Hot Trending MCP",
+  "description": "MCP server aggregating real-time hot-search/trending boards from 8 major Chinese platforms (Weibo, Zhihu, Bilibili, Baidu, Toutiao, Douyin, Tieba, Juejin) in one call.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/boy-373/hot-trending-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.pianam.cn/hot-mcp/mcp"
+    }
+  ]
+}
