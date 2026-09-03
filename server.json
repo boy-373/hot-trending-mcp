@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.boy-373/hot-trending-mcp",
+  "name": "cn.pianam.mcp/hot-trending-mcp",
   "title": "China Hot Trending MCP",
   "description": "MCP server aggregating hot-search boards from 8 Chinese platforms (Weibo, Zhihu, Bilibili, Douyin).",
   "version": "1.0.0",
