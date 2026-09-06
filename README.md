@@ -120,6 +120,8 @@ python hot_mcp_server.py
 
 [MIT](LICENSE) © 2026 boy-373
 
+[![hot-trending-mcp MCP server](https://glama.ai/mcp/servers/boy-373/hot-trending-mcp/badges/score.svg)](https://glama.ai/mcp/servers/boy-373/hot-trending-mcp)
+
 ## Install via Smithery
 
 One-click install for [Smithery](https://smithery.ai)-supported clients (Claude Desktop, Cursor, etc.):
