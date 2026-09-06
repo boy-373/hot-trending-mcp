@@ -48,7 +48,7 @@ Add this to your MCP client's `mcpServers` configuration (Claude Desktop `claude
 - All data comes from each platform's own **public** web/API endpoints — **no API key, no login, no scraping of private data**.
 - Implementation inspired by the open-source [DailyHotApi](https://github.com/imsyy/DailyHotApi) project (MIT) with a thin stdlib-only implementation.
 - Results are **cached in memory for 300 seconds**; a failed source degrades gracefully.
-- The hosted endpoint is rate-limited to **60 requests / minute / IP** (HTTP 429 beyond that).
+- The hosted endpoint is rate-limited to **200 requests / minute / IP** (HTTP 429 beyond that).
 
 ## 🐢 Self-hosting
 
@@ -72,7 +72,7 @@ No API keys or accounts are ever required.
 ## 🗂️ Files
 
 - `hot_mcp_server.py` — the MCP server (FastMCP, Streamable HTTP transport).
-- `rate_limit.py` — lightweight per-IP sliding-window rate-limit middleware (60 req/min default).
+- `rate_limit.py` — lightweight per-IP sliding-window rate-limit middleware (200 req/min default).
 - `requirements.txt` — `mcp`, `uvicorn`, `starlette`.
 - `server.json` — official MCP Registry manifest (remote server entry, ready to publish with `mcp-publisher`).
 - `smithery.yaml` / `glama.json` — directory listing metadata.
@@ -81,7 +81,7 @@ No API keys or accounts are ever required.
 
 ## 🇨🇳 中文使用说明
 
-**一句话**：**8 大中文平台热榜，一次调用全拿到**：微博热搜、知乎热榜、B站热门、百度热搜、头条热榜、抖音热点、贴吧热议、掘金热榜。数据全部来自各平台官方公开接口，无需任何 API Key 或登录；服务端缓存 5 分钟，单 IP 限流 60 次/分钟。
+**一句话**：**8 大中文平台热榜，一次调用全拿到**：微博热搜、知乎热榜、B站热门、百度热搜、头条热榜、抖音热点、贴吧热议、掘金热榜。数据全部来自各平台官方公开接口，无需任何 API Key 或登录；服务端缓存 5 分钟，单 IP 限流 200 次/分钟。
 
 **在线直连地址（免费、无需 Key、开箱即用）**：`https://mcp.pianam.cn/hot-mcp/mcp`
 
@@ -104,7 +104,7 @@ No API keys or accounts are ever required.
 - `list_platforms()`：列出支持的 8 个平台及中英文名。
 - 返回字段：排名 `rank`、标题 `title`、热度值 `hot`、原文链接 `url`；`all` 模式还会返回 `failed` 字段标注暂时失败的平台，不影响其他平台。
 
-**服务特性**：数据源全部为公开接口、无需注册/付费；服务端内存缓存、失败自动降级/切换备用通道；单 IP 限流 60 次/分钟。
+**服务特性**：数据源全部为公开接口、无需注册/付费；服务端内存缓存、失败自动降级/切换备用通道；单 IP 限流 200 次/分钟。
 
 **本地部署**：
 
