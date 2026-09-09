@@ -68,6 +68,14 @@ No API keys or accounts are ever required.
 
 ### 🐳 Self-host with Docker
 
+**Option A — pull the pre-built image (fastest, no build):**
+
+```bash
+docker run -d -p 8000:8000 --name hot-trending-mcp ghcr.io/boy-373/hot-trending-mcp:latest
+```
+
+**Option B — build from source:**
+
 ```bash
 git clone https://github.com/boy-373/hot-trending-mcp.git
 cd hot-trending-mcp
@@ -133,6 +141,10 @@ python hot_mcp_server.py
 **Docker 自托管**：
 
 ```bash
+# 方式一：直接拉预构建镜像（最快，无需构建）
+docker run -d -p 8000:8000 --name hot-trending-mcp ghcr.io/boy-373/hot-trending-mcp:latest
+
+# 方式二：从源码构建
 git clone https://github.com/boy-373/hot-trending-mcp.git && cd hot-trending-mcp
 docker build -t hot-trending-mcp .
 docker run -d -p 8000:8000 --name hot-trending-mcp hot-trending-mcp
